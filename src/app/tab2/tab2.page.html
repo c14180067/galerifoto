@@ -1,17 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      About Us
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Nama:
+          </ion-col>
+          <ion-col size="11.6">
+            Alfonsus Enrico
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            TTL:
+          </ion-col>
+          <ion-col size="11.6">
+           Surabaya, 6 Januari 2000
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Jurusan:
+          </ion-col>
+          <ion-col size="11.5">
+           Teknik Informatika '18
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-label>
+  </ion-item>
 </ion-content>

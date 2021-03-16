@@ -7,6 +7,33 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  private tebak : number;
+  private random : number;
+  guess : boolean;
+  teks : string;
+
+  constructor() {
+    this.random = this.getRandom();
+    console.log(this.random);
+  }
+
+  getRandom() {
+    return Math.floor(Math.random() * Math.floor(10));
+  }
+
+  submit() {
+    if(this.tebak > 0 && this.tebak <= 10) {
+      if(this.tebak == this.random) {
+        this.guess = true;
+        this.teks = "Tebakan anda benar, angka adalah "+this.random;
+      }
+      else {
+        this.teks = "Silahkan coba lagi";
+      }
+    }
+    else {
+      this.teks = "Input angka hanya 1-10!";
+    }
+  }
 
 }

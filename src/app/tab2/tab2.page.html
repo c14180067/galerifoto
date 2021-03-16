@@ -8,7 +8,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-item>
-    <ion-avatar slot="start">
+    <ion-avatar slot="start" *ngIf="this.guess == true">
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
     </ion-avatar>
     <ion-label>
@@ -40,4 +40,15 @@
       </ion-grid>
     </ion-label>
   </ion-item>
+  <br/><br/><br/><br/><br/>
+  <div style="text-align:center">
+    <h2>Minigame Tebak Angka</h2><br/>
+    <ion-item style="margin-left:auto; margin-right:auto; width:30%">
+      <ion-label position="floating">Masukkan angka (1 - 10)</ion-label>
+      <ion-input type="number" [(ngModel)]="tebak" pattern="[1-10]" required="true"></ion-input>
+    </ion-item><br/>
+    <ion-button (click)="submit()">Submit</ion-button><br/><br/><br/><br/>
+    {{teks}}
+  </div>
+  
 </ion-content>
